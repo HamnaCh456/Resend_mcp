@@ -31,4 +31,4 @@ def send_email(subject: str, to: str, from_email: str, content: str, api_key: st
         return f"Email sending failed: {str(e)}"
 
 if __name__ == "__main__":
-    mcp.run(transport="http")
+    mcp.run(transport="stdio")
