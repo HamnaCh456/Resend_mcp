@@ -2,9 +2,10 @@ from mcp.server.fastmcp import FastMCP
 import resend  
 import httpx
 from dotenv import load_dotenv
+import os
 
 PORT = os.environ.get("PORT", 10000)
-mcp = FastMCP("Resend Email Server",, host="0.0.0.0", port=PORT) 
+mcp = FastMCP("Resend Email Server", host="0.0.0.0", port=PORT) 
 
 @mcp.tool()   
 def send_email(subject: str, to: str, from_email: str, content: str, api_key: str) -> str:  
